@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  
+  <header>
+    <h1>{% block name %}{% endblock %}</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'product' %}">Products</a></li>
+        <li><a href="{% url 'cart' %}">Cart ({{ cart_list | length }})</a></li>
+      </ul>
+    </nav>
+  </header>
+
+{% block content %}{% endblock %}
+
+  <footer>
+    <p>2023: @ by Angyal Rubo</p>
+  </footer>
+
+</body>
+</html>

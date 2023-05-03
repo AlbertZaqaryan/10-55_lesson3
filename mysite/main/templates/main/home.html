@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block name %}Home{% endblock %}
+
+{% block content %}
+  <main>
+    <section>
+      <h2>{{ home_info.name }}</h2>
+      <p>{{ home_info.about }}</p>
+    </section>
+  </main>
+{% endblock %}
+
+  
